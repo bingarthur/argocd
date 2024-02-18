@@ -4,7 +4,7 @@ DOCKER_BASE_IMAGE = alpine:3.14
 #######################################
 # Docker
 TAG ?= test
-REGISTRY ?= spirosoik
+REGISTRY ?= lbarthur
 CH06_IMAGE ?= ${REGISTRY}/ch06:${TAG}
 ################################################################################
 
