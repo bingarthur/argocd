@@ -32,3 +32,9 @@ spec:
     - p, proj:team:ci-role, applications, create, team/*, allow
     - p, proj:team:ci-role, applications, update, team/*, allow
     - p, proj:team:ci-role, applications, delete, team/*, allow
+
+#apply this yaml to create a new project , called team
+# argocd login 127.0.0.1:8080
+# get a token by ci-role
+#argocd proj role create-token team ci-role -e 1d
+# add this role to github secret 
