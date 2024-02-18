@@ -55,9 +55,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    #- name: Build
-    #  run: |
-    #    TAG=${{ steps.branch.outputs.current_branch }} make push-image
+    - name: Build
+      run: |
+        TAG=${{ steps.branch.outputs.current_branch }} make push-image
 
   #deploy-argo:
     #name: Create Argo App
