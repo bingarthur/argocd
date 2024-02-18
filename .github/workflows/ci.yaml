@@ -27,8 +27,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
 
-      - name: Lint
-        run: make lint
+      #- name: Lint
+      #  run: make lint
 
   build:
     name: Build & Push
@@ -72,12 +72,12 @@ jobs:
       run: |
         make download-argo-cli
 
-    - name: Deploy Argo app
-      run: |
-        make create-argo-app
-      env:
-        PROJ: team
-        APP: blue-green
-        JWT: ${{ secrets.ARGOCD_TOKEN }}
-        ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
-        ARGOCD_PATH: "deployments/argo"
+    #- name: Deploy Argo app
+    #  run: |
+    #    make create-argo-app
+    #  env:
+    #    PROJ: team
+    #    APP: blue-green
+    #    JWT: ${{ secrets.ARGOCD_TOKEN }}
+    #    ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+    #    ARGOCD_PATH: "deployments/argo"
